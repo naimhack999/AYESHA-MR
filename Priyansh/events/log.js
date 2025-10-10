@@ -25,7 +25,7 @@ module.exports.run = async function ({ api, event, Users, Threads, Currencies })
   }*/
   
   const moment = require("moment-timezone");
-  const time = moment.tz("Asia/Kolkata").format("D/MM/YYYY HH:mm:ss");
+  const time = moment.tz("Asia/Dhaka").format("D/MM/YYYY HH:mm:ss");
   let sex = threadInfo.approvalMode;
   var pd = sex == false ? 'Turn off' : sex == true ? 'Turn on' : '\n';
   let qtv = threadInfo.adminIDs.length;
