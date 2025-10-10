@@ -33,14 +33,14 @@ module.exports.run = async function({ api, event, Users, Threads }) {
   const hours = moment.tz("Asia/Kolkata").format("HH");
   const data = global.data.threadData.get(parseInt(threadID)) || (await Threads.getData(threadID)).data;
   const name = global.data.userName.get(event.logMessageData.leftParticipantFbId) || await Users.getNameUser(event.logMessageData.leftParticipantFbId);
-  const type = (event.author == event.logMessageData.leftParticipantFbId) ? "KHUD SE LEFT HO GYE😀" : "ADMIN NE PEET K BHAGA DIYA😄😀";
+  const type = (event.author == event.logMessageData.leftParticipantFbId) ? "𝗡𝗶𝗷𝗲𝗿 𝗜𝘀𝘀𝗮𝗶 𝗖𝗼𝗹𝗲 𝗚𝗲𝘀𝗲 😃" : "𝗚𝗰 𝗔𝗱𝗺𝗶𝗻 𝗠𝗮𝗶𝗿𝗮 𝗕𝗲𝗿 𝗸𝗼𝗿𝗲 𝗗𝗶𝘀𝗲 🙂";
   const path = join(__dirname, "events", "123.mp4");
   const pathGif = join(path, `${threadID}123.mp4`);
   var msg, formPush
 
   if (existsSync(path)) mkdirSync(path, { recursive: true });
 
-(typeof data.customLeave == "undefined") ? msg = "[⚜️] 👉🏻 {name} 👈🏻\n👉 {type}  [⚜️] \n 𝐉𝐀𝐍𝐄 𝐃𝐎 𝐔𝐒𝐊𝐎 𝐓𝐔𝐌 𝐋𝐎𝐆 𝐄𝐍𝐉𝐎𝐘 𝐊𝐑𝐎 🫠\nGood {session} || {time}" : msg = data.customLeave;
+(typeof data.customLeave == "undefined") ? msg = "[⚜️] 👉🏻 {name} 👈🏻\n👉 {type}  [⚜️] \n 𝗢𝗿𝗲 𝗝𝗮𝗶𝘁𝗲 𝗗𝗲𝘂 𝗧𝗺𝗿𝗮 𝗠𝗼𝗷𝗮 𝗞𝗼𝗿𝗼 🫠\nGood {session} || {time}" : msg = data.customLeave;
   msg = msg.replace(/\{name}/g, name).replace(/\{type}/g, type).replace(/\{session}/g, hours <= 10 ? "Morning" : 
     hours > 10 && hours <= 12 ? "Afternoon" :
     hours > 12 && hours <= 18 ? "Evening" : "Night").replace(/\{time}/g, time);  
