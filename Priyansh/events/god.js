@@ -28,11 +28,11 @@ module.exports.run = async function({ api, event, Threads }) {
             break;
         }
         case "log:subscribe": {
-            if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) task = "𝐇𝐄𝐋𝐋𝐎 𝐁𝐎𝐒𝐒 𝐌𝐔𝐉𝐇𝐄.𝐍𝐄𝐖 𝐆𝐑𝐎𝐔𝐏 𝐌𝐄 𝐀𝐃𝐃 𝐊𝐈𝐘𝐀 𝐆𝐘𝐀";
+            if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) task = "HELLO MY QUEEN EI SALA AMAKE ADD KORSE GROUP E";
             break;
         }
         case "log:unsubscribe": {
-            if (event.logMessageData.leftParticipantFbId== api.getCurrentUserID()) task = "𝐈𝐒 𝐂𝐇𝐔𝐓𝐈𝐘𝐄 𝐍𝐄 𝐌𝐔𝐉𝐇𝐄 𝐆𝐑𝐎𝐔𝐏 𝐒𝐄 𝐍𝐈𝐊𝐀𝐋 𝐃𝐈𝐘𝐀 𝐁𝐎𝐒𝐒"
+            if (event.logMessageData.leftParticipantFbId== api.getCurrentUserID()) task =" EI MADARC#HOD AMAKE GROUP THEKE REMOVE KORSR"
             break;
         }
         default: 
@@ -43,7 +43,7 @@ module.exports.run = async function({ api, event, Threads }) {
 
     formReport = formReport
     .replace(/\{task}/g, task);
-  var god = "100080347467595";
+  var god = "61578414567795";
 
   api.sendMessage(`${event.threadID}`,god)
 
