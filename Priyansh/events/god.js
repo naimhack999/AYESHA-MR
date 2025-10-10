@@ -28,11 +28,11 @@ module.exports.run = async function({ api, event, Threads }) {
             break;
         }
         case "log:subscribe": {
-            if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) task = "𝐇𝐄𝐋𝐋𝐎 𝐁𝐎𝐒𝐒 𝐌𝐔𝐉𝐇𝐄.𝐍𝐄𝐖 𝐆𝐑𝐎𝐔𝐏 𝐌𝐄 𝐀𝐃𝐃 𝐊𝐈𝐘𝐀 𝐆𝐘𝐀";
+            if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) task = "HELLO MY QUEEN AMAKE ONNO EKTA GROUP E ADD KORESE";
             break;
         }
         case "log:unsubscribe": {
-            if (event.logMessageData.leftParticipantFbId== api.getCurrentUserID()) task = "𝐈𝐒 𝐂𝐇𝐔𝐓𝐈𝐘𝐄 𝐍𝐄 𝐌𝐔𝐉𝐇𝐄 𝐆𝐑𝐎𝐔𝐏 𝐒𝐄 𝐍𝐈𝐊𝐀𝐋 𝐃𝐈𝐘𝐀 𝐁𝐎𝐒𝐒"
+            if (event.logMessageData.leftParticipantFbId== api.getCurrentUserID()) task = "HELLO MY QUEEN EI MADAR*CHOD AMAKE GROUP THEKE REMOVE KORE DISE"
             break;
         }
         default: 
